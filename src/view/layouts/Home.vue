@@ -3,7 +3,7 @@
       <loader v-if="isLoading" v-on:loaded="loadingDone"></loader>
       <entete :loaded="isLoading"></entete>
       <servicesContainer :loaded="isLoading"></servicesContainer>
-      <articlesContainer  :loaded="isLoading" :delay=".5"></articlesContainer>
+      <articlesContainer  :loaded="isLoading" :delay="1.5"></articlesContainer>
   </div>
 </template>
 

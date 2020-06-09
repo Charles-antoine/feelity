@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import { TimelineMax, Sine } from 'gsap'
+import { gsap, Sine } from 'gsap'
 
-const timeline = new TimelineMax({onComplete:() => {}})
+const timeline = gsap.timeline({onComplete:() => {}})
 let $button;
 // let $icon;
 
@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     animeIn(){
-      timeline.to($button, .5, { opacity:1, x:0, ease: Sine.easeInOut, delay:0})
+      timeline.to($button, { duration:1, opacity:1, x:0, ease: Sine.easeInOut, delay:0})
     }
   },  
 }

@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import { TimelineMax, Sine } from 'gsap'
+import { gsap, Sine } from 'gsap'
 //
-const timeline = new TimelineMax({onComplete:() => {}})
+const timeline = gsap.timeline({onComplete:() => {}})
 //
 export default {
   name: 'articlesContainer',
@@ -47,7 +47,7 @@ export default {
   },  
   methods: {
     animeIn(){
-      timeline.staggerTo(this.$elements, .5, { opacity:1,y:0, ease: Sine.easeOut, delay:this.delay},0.2)  
+      timeline.to(this.$elements,.5,{ opacity:1,y:0, ease: Sine.easeOut, delay:this.delay, stagger:.2},"<-1")
     }
   }  
 }

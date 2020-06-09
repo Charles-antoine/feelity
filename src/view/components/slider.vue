@@ -12,9 +12,10 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-import { TimelineMax, Sine } from 'gsap'
+import { gsap,Sine} from 'gsap'
+// import { CSSPlugin } from 'gsap/CSSPlugin'
+// gsap.registerPlugin(CSSPlugin);
 
-const timeline = new TimelineMax({onComplete:() => {}})
 let $wrapper;
 
 export default {
@@ -70,11 +71,11 @@ export default {
   },  
   mounted() {
     $wrapper = document.querySelectorAll('.wrapper')    
-    timeline.set($wrapper, { opacity:0,x:30})
+    gsap.set($wrapper, { opacity:0,x:30})
   }, 
   methods: {
     animeIn(){
-      timeline.staggerTo($wrapper, .5, { opacity:1,x:0, ease: Sine.easeOut, delay:this.delay},0.3)
+      gsap.to($wrapper,.5,{ opacity:1,x:0, ease: Sine.easeOut, delay:this.delay,stagger:.3},"<-1")
     }
   }   
 }
