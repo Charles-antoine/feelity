@@ -23,12 +23,12 @@ export default {
       this.$emit('loaded');
     },
     animeIn () {
-    const { logo, back } = this.$refs
-    const timeline = gsap.timeline({onComplete:() => {this.loaded();}})
-    timeline.to(logo, .5, {duration:.5, opacity: 1,top:"50%", ease: Sine.easeOut, delay:0.5}) 
-    timeline.to(back, 1, {duration:1, top: "100%", ease: Circ.easeInOut, delay:.75})
-    timeline.to(logo, 1, {duration:1, opacity: 0,y:"90", ease: Circ.easeInOut, delay:-.95}) 
+      const { logo, back } = this.$refs
+      const timeline = gsap.timeline({onComplete:() => {this.loaded();}})
+      timeline.to(logo, .5, {duration:.5, opacity: 1,top:"50%", ease: Sine.easeOut, delay:0.5}) 
+      timeline.to(back, 1, {duration:1, top: "100%", ease: Circ.easeInOut, delay:.75})
+      timeline.to(logo, 1, {duration:1, opacity: 0,y:"90", ease: Circ.easeInOut, delay:-.95}) 
     }
-  }, 
+  }
 }
 </script>
