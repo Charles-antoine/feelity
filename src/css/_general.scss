@@ -1,0 +1,213 @@
+// FONT
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+//INITIAL
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $color-white;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+//TYPOGRAPHIE
+h1 {
+    margin: 0;
+    padding: 0;
+    @include typo(2.625, bold);
+}
+
+p {
+    @include typo(1.125, bold, $color-black);
+    line-height: 26px;
+}
+
+//COLORS
+.white {
+    color: $color-white;
+}
+
+.black {
+    color: $color-black;
+}
+
+.overflow{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+// BLOCK
+.block {
+    padding-left: $padding;
+    padding-right: $padding;
+
+
+    &__loader{
+        overflow: hidden;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;        
+        .back {
+            position: absolute;
+            z-index:1;
+            top:0;
+            left:0;
+            background-color:$color-black;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .logo{
+            opacity:0;
+            position: absolute;
+            z-index:1;
+            top:52%;
+            left:50%;
+            transform:translate(-50%,-50%);  
+        }
+    }
+
+    &__header {
+        background-color: $color-light-black;
+        padding-top: 1.875rem;
+        padding-bottom: 2.0625rem;
+        @include displayFlex(flex, flex-start, center);
+
+        .icon {
+            margin-left: 3.125rem;
+            margin-top: 6px;
+        }
+    }
+
+    &__services {
+        background: linear-gradient(180deg, $color-light-black 30%, $color-white 30%);
+        margin-top: -1px;
+        @include respond-to('medium') {
+            background: linear-gradient(180deg, $color-light-black 40%, $color-white 40%);
+        }   
+        h1 {
+            padding-bottom: 1.075rem;
+            @include respond-to('medium') {
+                text-align: center;
+                padding-bottom: 3rem;
+            }            
+        }
+    }
+
+    &__articles {
+        @include respond-to('medium') {
+            @include displayFlex(flex, space-between, center);
+        }
+
+        p {
+            margin-bottom: 26px;
+            @include respond-to('xmedium') {
+                max-width:80%;
+            }
+        }
+
+        .left {
+            @include respond-to('medium') {
+                min-width: 45%;
+            }
+        }
+        .right {
+            @include respond-to('medium') {
+                width: 55%;
+                padding: 0 4rem;
+            }
+
+        }
+
+
+    }
+
+    &__slider {
+        position: relative;
+        display: block;
+
+        .wrapper {
+            background-color: $color-white;
+            border-radius: 22px;
+            box-shadow: $shadow;
+            padding: .75rem;
+            width: auto !important;
+            outline: none;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            img {
+                max-height: 262px;
+                max-width: 276px;
+            }
+        }
+    }
+}
+
+//BUTTONS
+.button {
+    border: none;
+
+    &-icon {
+        min-width: 45px;
+        height: 45px;
+        background-color: $color-dark-grey;
+        border-radius: 10px;
+        @include displayFlex(flex, center, center);
+    }
+
+    &-full {
+        background-color: $color-light-grey;
+        border-radius: 22px;
+        padding: 1.0625rem 1.375rem;
+        @include displayFlex(flex, space-between, center);
+        @include respond-to('xmedium') {
+            width: 70%;
+        }
+
+        span {
+            @include typo(1.125, bold, $color-black);
+        }
+
+        .reverse {
+            background-color: $color-white;
+            box-shadow: $shadow-icons;
+        }
+    }
+}
+
+
+//SLIDER
+.slick {
+    &-slider {
+        overflow: hidden;
+    }
+
+    &-list {
+        min-height: 340px;
+    }
+
+    &-slide {
+        padding-left: $padding;
+        padding-right: 4px;
+    }
+}

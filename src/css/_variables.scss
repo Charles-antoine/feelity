@@ -1,0 +1,19 @@
+// RESPONSIVE GRID
+$breakpoints: (
+    'small':  375px,
+    'medium': 768px,
+    'xmedium': 1024px,
+    'large':  1200px
+  ) !default;  
+// COLORS
+$color-black : #000000;
+$color-light-black : #222222;
+$color-white : #FFFFFF;
+$color-grey : rgba($color-black,.5);
+$color-dark-grey : #4A4A4A;
+$color-light-grey : #F4F4F4;
+//SHADOW
+$shadow : 5px 16px 40px -16px rgba(0, 0, 0, 0.45);
+$shadow-icons : 0px 0px 24px -11px rgba(0, 0, 0, 0.85);
+//GUTTER
+$padding: 1.1875rem;
