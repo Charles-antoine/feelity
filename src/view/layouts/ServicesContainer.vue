@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import slider from '../components/slider'
+import slider from '../components/Slider'
 import { TimelineMax, Sine } from 'gsap'
 
 const timeline = new TimelineMax({onComplete:() => {}})

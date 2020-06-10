@@ -1,7 +1,7 @@
 <template>
   <div class="block block__articles">
     <div class="left show-for-medium" ref="img">
-        <img alt="describe image" :src="'./assets/slider/Rectangle-10.png'">
+        <img alt="describe image" :src="urlImageDesktop">
     </div>
     <div class="right">
       <h1 class="black" ref="title">{{title}}</h1>
@@ -9,7 +9,7 @@
       <a href="#" target-="_self" class="button-full" ref="btFull">
           <span>{{label}}</span>
           <button class="button button-icon reverse">     
-            <img alt="back button" :src="url">
+            <img alt="back button" :src="urlButton">
           </button>
       </a>
     </div>
@@ -33,7 +33,8 @@ export default {
       title : 'Articles',
       desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet malesuada ex, consectetur convallis erat. Sed viverra id metus in eleifend. ',
       'label' : 'Commencer à lire', 
-      'url' :'./assets/icon-arrow-next.svg'
+      'urlButton' :'./assets/icon-arrow-next.svg',
+      'urlImageDesktop' :'./assets/slider/Rectangle-10.png'
     }
   },
   watch:{
