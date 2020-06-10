@@ -42,7 +42,7 @@ export default {
             "initialSlide": 0,          
             "responsive": [
                         {
-                          "breakpoint": 4000,
+                          "breakpoint": 6000,
                           "settings": {
                             "centerMode": true,
                             "slidesToShow": 1,
