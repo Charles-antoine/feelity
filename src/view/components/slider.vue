@@ -12,7 +12,7 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-import { gsap,Sine} from 'gsap' 
+import { gsap, Sine} from 'gsap' 
 
 let $wrapper;
 
@@ -71,11 +71,11 @@ export default {
   },  
   mounted() {
     $wrapper = document.querySelectorAll('.wrapper')    
-    gsap.set($wrapper, { opacity:0,x:30})
+    gsap.set($wrapper, { opacity:0, x:30 })
   }, 
   methods: {
     animeIn(){
-      gsap.to($wrapper,.5,{ opacity:1,x:0, ease: Sine.easeOut, delay:this.delay,stagger:.3},"<-1")
+      gsap.to($wrapper,.5,{ opacity:1, x:0, ease: Sine.easeOut, delay:this.delay, stagger:.3 },"<-1")
     }
   }   
 }
