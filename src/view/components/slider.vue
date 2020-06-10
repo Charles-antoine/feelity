@@ -57,6 +57,7 @@ export default {
                             "slidesToShow": 1,
                             "initialSlide": 0,
                             "slidesToScroll": 1,
+                            "swipe":true
                           }
                         }
                       ]
