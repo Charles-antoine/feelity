@@ -1,4 +1,4 @@
-# feelity
+# FEELITY 
 
 ## Project setup
 ```
@@ -24,7 +24,7 @@ yarn lint
 ```
 SRC content :
 - css
-- view (Partials, layouts,components)
+- view (Partials, layouts, components)
 ```
 
 
