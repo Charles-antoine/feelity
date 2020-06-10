@@ -16,6 +16,7 @@ import { gsap, Sine} from 'gsap'
 
 let $wrapper;
 
+
 export default {
   name: 'slider',
   components:{
