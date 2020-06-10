@@ -12,7 +12,7 @@ import servicesContainer from '../layouts/ServicesContainer'
 import articlesContainer from '../layouts/ArticlesContainer'
 import entete from '../partials/Entete'
 import loader from '../components/Loader'
-//
+
 export default {
   name: 'home',
   components:{

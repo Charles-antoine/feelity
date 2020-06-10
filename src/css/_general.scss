@@ -44,10 +44,10 @@ p {
     color: $color-black;
 }
 
-.overflow{
-    width:100vw;
-    height:100vh;
-    overflow:hidden;
+.overflow {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 // BLOCK
@@ -56,31 +56,32 @@ p {
     padding-right: $padding;
 
 
-    &__loader{
+    &__loader {
         overflow: hidden;
         position: absolute;
         z-index: 2;
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;        
+        height: 100vh;
+
         .back {
             position: absolute;
-            z-index:1;
-            top:0;
-            left:0;
-            background-color:$color-black;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: $color-black;
             width: 100vw;
             height: 100vh;
         }
 
-        .logo{
-            opacity:0;
+        .logo {
+            opacity: 0;
             position: absolute;
-            z-index:1;
-            top:52%;
-            left:50%;
-            transform:translate(-50%,-50%);  
+            z-index: 1;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -99,15 +100,18 @@ p {
     &__services {
         background: linear-gradient(180deg, $color-light-black 30%, $color-white 30%);
         margin-top: -1px;
+
         @include respond-to('medium') {
             background: linear-gradient(180deg, $color-light-black 40%, $color-white 40%);
-        }   
+        }
+
         h1 {
             padding-bottom: 1.075rem;
+
             @include respond-to('medium') {
                 text-align: center;
                 padding-bottom: 3rem;
-            }            
+            }
         }
     }
 
@@ -118,8 +122,9 @@ p {
 
         p {
             margin-bottom: 26px;
+
             @include respond-to('xmedium') {
-                max-width:80%;
+                max-width: 80%;
             }
         }
 
@@ -128,6 +133,7 @@ p {
                 min-width: 45%;
             }
         }
+
         .right {
             @include respond-to('medium') {
                 width: 55%;
@@ -180,6 +186,7 @@ p {
         border-radius: 22px;
         padding: 1.0625rem 1.375rem;
         @include displayFlex(flex, space-between, center);
+
         @include respond-to('xmedium') {
             width: 70%;
         }

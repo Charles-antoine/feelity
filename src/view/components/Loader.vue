@@ -2,7 +2,7 @@
   <div class="block__loader">
           <div class="back" ref="back"></div>
           <div class="logo" ref="logo">
-            <img alt="feelity logo" :src="'./assets/feelity.svg'">
+            <img alt="feelity logo" :src="logo">
           </div>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
   mounted() { 
     this.animeIn();
   },
+  data(){
+    return {
+      logo: "./assets/feelity.svg"
+    }
+  },    
   methods: {
     loaded () {
       const $block = document.querySelector('.block__loader');

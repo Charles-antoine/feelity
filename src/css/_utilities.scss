@@ -1,36 +1,36 @@
+// MIXIN
 @mixin typo ($size:1, $weight:500, $color:$color-grey) {
-    font-size: #{$size}rem;
-    font-weight: $weight;
-    color: $color;
+  font-size: #{$size}rem;
+  font-weight: $weight;
+  color: $color;
 }
 
 @mixin displayFlex($type: flex, $js: center, $ai: center) {
-    display: $type;
-    justify-content: $js;
-    align-items: $ai;
+  display: $type;
+  justify-content: $js;
+  align-items: $ai;
 }
 
 
 @mixin respond-to($breakpoint) {
-    // If the key exists in the map
-    @if map-has-key($breakpoints, $breakpoint) {
-      // Prints a media query based on the value
-      @media (min-width: map-get($breakpoints, $breakpoint)) {
-        @content;
-      }
-    }
-   
-    // If the key doesn't exist in the map
-    @else {
-      @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
     }
   }
 
-
-  .show-for-medium {
-    display:none;
-    @include respond-to('medium') {
-        display:block;
-      }       
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    +"Available breakpoints are: #{map-keys($breakpoints)}.";
   }
+}
+
+
+//CLASS UTILS
+.show-for-medium {
+  display: none;
+
+  @include respond-to('medium') {
+    display: block;
+  }
+}

@@ -1,10 +1,10 @@
 <template>
   <div class="block block__header">
     <button class="button button-icon">     
-      <img alt="back button" :src="'./assets/icon-arrow-back.svg'">
+      <img alt="back button" :src="back">
     </button>
     <a href="/" target="_self" class="icon">
-      <img alt="feelity logo" :src="'./assets/feelity.svg'">
+      <img alt="feelity logo" :src="logo">
     </a>
   </div>
 </template>
@@ -12,16 +12,20 @@
 <script>
 import { gsap, Sine } from 'gsap'
 
-const timeline = gsap.timeline({onComplete:() => {}})
+const timeline = gsap.timeline();
 let $button;
-// let $icon;
-
 
 export default {
   name: 'entete',
   props:[
     'loaded',
   ],
+  data(){
+    return {
+        back : './assets/icon-arrow-back.svg',
+        logo : './assets/feelity.svg',
+    }
+  },
   watch:{
     loaded(){
       this.animeIn();
@@ -35,9 +39,6 @@ export default {
     animeIn(){
       timeline.to($button, { duration:1, opacity:1, x:0, ease: Sine.easeInOut, delay:0})
     }
-  },  
+  }
 }
 </script>
-
-<style scoped>
-</style>

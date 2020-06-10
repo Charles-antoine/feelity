@@ -12,9 +12,7 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-import { gsap,Sine} from 'gsap'
-// import { CSSPlugin } from 'gsap/CSSPlugin'
-// gsap.registerPlugin(CSSPlugin);
+import { gsap,Sine} from 'gsap' 
 
 let $wrapper;
 
@@ -49,6 +47,7 @@ export default {
                             "slidesToShow": 1,
                             "slidesToScroll": 3,
                             "initialSlide": 1,
+                            "swipe":false
                           }
                         },
                         {

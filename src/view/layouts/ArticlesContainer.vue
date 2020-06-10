@@ -4,12 +4,12 @@
         <img alt="describe image" :src="'./assets/slider/Rectangle-10.png'">
     </div>
     <div class="right">
-      <h1 class="black" ref="title">{{this.title}}</h1>
-      <p class="desc" ref="desc">{{this.desc}}</p>
+      <h1 class="black" ref="title">{{title}}</h1>
+      <p class="desc" ref="desc">{{desc}}</p>
       <a href="#" target-="_self" class="button-full" ref="btFull">
-          <span>{{this.label}}</span>
+          <span>{{label}}</span>
           <button class="button button-icon reverse">     
-            <img alt="back button" :src="'./assets/icon-arrow-next.svg'">
+            <img alt="back button" :src="url">
           </button>
       </a>
     </div>
@@ -18,9 +18,9 @@
 
 <script>
 import { gsap, Sine } from 'gsap'
-//
+
 const timeline = gsap.timeline({onComplete:() => {}})
-//
+
 export default {
   name: 'articlesContainer',
   props:[
@@ -32,7 +32,8 @@ export default {
       $elements: [],
       title : 'Articles',
       desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet malesuada ex, consectetur convallis erat. Sed viverra id metus in eleifend. ',
-      'label' : 'Commencer à lire'
+      'label' : 'Commencer à lire', 
+      'url' :'./assets/icon-arrow-next.svg'
     }
   },
   watch:{
@@ -43,11 +44,11 @@ export default {
   mounted() {
     const { title, desc, btFull, img } = this.$refs;    
     this.$elements = [img,title,desc,btFull];
-    timeline.set(this.$elements , { opacity:0,y:30})
+    timeline.set(this.$elements , { opacity:0, y:30})
   },  
   methods: {
     animeIn(){
-      timeline.to(this.$elements,.5,{ opacity:1,y:0, ease: Sine.easeOut, delay:this.delay, stagger:.2},"<-1")
+      timeline.to(this.$elements,.5,{ opacity:1, y:0, ease: Sine.easeOut, delay:this.delay, stagger:.2},"<-1")
     }
   }  
 }

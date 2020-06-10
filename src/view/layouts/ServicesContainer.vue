@@ -1,6 +1,6 @@
 <template>
   <div class="block__services">
-      <h1  class="block white title">Services</h1>
+      <h1  class="block white title">{{title}}</h1>
       <slider :loaded="loaded" :delay='.25'></slider>
   </div>
 </template>
@@ -20,6 +20,11 @@ export default {
   props:[
     'loaded',
   ],
+  data(){
+    return {
+      title: "Services"
+    }
+  },  
   watch:{
     loaded(){
       this.animeIn();
