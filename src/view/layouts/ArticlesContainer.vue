@@ -6,7 +6,7 @@
     <div class="right">
       <h1 class="black" ref="title">{{title}}</h1>
       <p class="desc" ref="desc">{{desc}}</p>
-      <a href="#" target-="_self" class="button-full" ref="btFull">
+      <a :href="linkPortfolio" target="_blank" class="button-full" ref="btFull">
           <span>{{label}}</span>
           <button class="button button-icon reverse">     
             <img alt="back button" :src="urlButton">
@@ -30,6 +30,7 @@ export default {
   data () {
     return {
       $elements: [],
+      linkPortfolio: 'https://sinifikant.com',
       title : 'Articles',
       desc : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet malesuada ex, consectetur convallis erat. Sed viverra id metus in eleifend. ',
       'label' : 'Commencer à lire', 

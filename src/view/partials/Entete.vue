@@ -1,8 +1,8 @@
 <template>
   <div class="block block__header">
-    <button class="button button-icon">     
+    <a  :href="linkFeelity" target="_blank" class="button button-icon">     
       <img alt="back button" :src="back">
-    </button>
+    </a>
     <a href="/" target="_self" class="icon">
       <img alt="feelity logo" :src="logo">
     </a>
@@ -22,6 +22,7 @@ export default {
   ],
   data(){
     return {
+        linkFeelity : 'https://www.feelity.fr/',
         back : './assets/icon-arrow-back.svg',
         logo : './assets/feelity.svg',
     }
