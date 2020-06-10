@@ -20,5 +20,19 @@ yarn build
 yarn lint
 ```
 
+### Structures
+```
+SRC content :
+- css
+- view (Partials, layouts,components)
+```
+
+
+### Libraries
+```
+- gsap 3
+- vue-slick-carousel 
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
