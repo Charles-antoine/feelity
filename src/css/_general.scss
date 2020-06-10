@@ -179,6 +179,7 @@ p {
         background-color: $color-dark-grey;
         border-radius: 10px;
         @include displayFlex(flex, center, center);
+        cursor:pointer;
         transition: $transition;
 
         @media (hover:hover) {
@@ -193,6 +194,7 @@ p {
         border-radius: 22px;
         padding: 1.0625rem 1.375rem;
         @include displayFlex(flex, space-between, center);
+        cursor:pointer;
         transition: $transition;
 
         @include respond-to('xmedium') {
